@@ -1,5 +1,6 @@
 import AboutUs from "../../modules/Home-page/About-us/AboutUs";
-import CourseCard from "../../ui/course-card/CourseCard";
+import BeastCourses from "../../modules/Home-page/Beast-courses/BeastCourses";
+
 import s from "./HomePage.module.scss";
 
 const HomePage = () => {
@@ -7,9 +8,7 @@ const HomePage = () => {
     <div className={s.home_page}>
       <div className="_container">
         <AboutUs />
-        <div className={s.home_page__beast_courses}>
-          <CourseCard />
-        </div>
+        <BeastCourses />
       </div>
     </div>
   );
