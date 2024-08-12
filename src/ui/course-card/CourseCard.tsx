@@ -1,11 +1,23 @@
+import { CardItems } from "../../interfaces/card-items/CardItems";
+import { CourseCardProps } from "../../interfaces/course-card/CourseCardProps";
 import Btn from "../btn/Btn";
 import s from "./CourseCard.module.scss";
-import { cardItems } from "./cardItems";
+import { homeCardItems } from "./homeCardItems";
+import { libraryCardItems } from "./libraryCardItems";
 
-const CourseCard = () => {
+const CourseCard: React.FC<CourseCardProps> = ({ type }) => {
+  let array: CardItems[] = [];
+  switch (type) {
+    case "home":
+      array = homeCardItems;
+      break;
+    case "library":
+      array = libraryCardItems;
+  }
+
   return (
     <>
-      {cardItems.map(({ src, text, lang, href }) => (
+      {array.map(({ src, text, lang, href }) => (
         <div className={s.card_body}>
           <div className={s.card_body__img}>
             <img src={src} alt="Course Image" /> {/* Added alt attribute */}

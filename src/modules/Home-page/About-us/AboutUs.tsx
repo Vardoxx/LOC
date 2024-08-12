@@ -26,7 +26,7 @@ const AboutUs = () => {
           your professional knowledge as well as discover completely new fields.
           fields. This is a great opportunity to become an expert in your field
           or to to try something new, which can be an impetus for personal
-          growth and development. development.
+          growth and development.
         </p>
       </div>
     </div>

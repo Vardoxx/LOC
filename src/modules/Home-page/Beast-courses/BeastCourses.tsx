@@ -6,7 +6,7 @@ const BeastCourses = () => {
     <div className="pt36">
       <div className={s.home_page__beast_courses}>
         <h1></h1>
-        <CourseCard />
+        <CourseCard type="home" />
       </div>
     </div>
   );

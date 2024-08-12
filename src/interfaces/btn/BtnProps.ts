@@ -1,5 +1,5 @@
 export interface BtnProps {
-  label?: string;
+  label: string;
+  href: string;
   width?: string;
-  href?: string;
 }
