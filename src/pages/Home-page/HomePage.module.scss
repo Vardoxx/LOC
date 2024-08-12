@@ -1,0 +1,11 @@
+.home_page {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  width: 100%; /* Занимает всю ширину родителя */
+  min-height: 100vh;
+  background-color: #555555;
+}
+
+.home_page__beast-courses {
+}

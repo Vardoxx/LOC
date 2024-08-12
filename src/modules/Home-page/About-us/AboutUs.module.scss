@@ -1,0 +1,18 @@
+.home_page__description {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  padding: 25px 10px;
+  text-shadow: 2px 2px 0px rgba(255, 72, 0, 0.534);
+
+  h1 {
+    font-size: 60px;
+    color: whitesmoke;
+  }
+  p {
+    text-align: center;
+    font-size: 30px;
+  }
+}
