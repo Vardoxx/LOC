@@ -17,12 +17,14 @@ const Layout = () => {
 
               <li className={s.nav_item}>
                 <img src="assets/svg/library-icon.svg" alt="" />
-                <h1 className="ml16">Library</h1>
+                <NavLink to={"/library"}>
+                  <h1 className="ml16">Library</h1>
+                </NavLink>
               </li>
 
               <li className={s.nav_item}>
                 <img src="assets/svg/heart-icon.svg" alt="" />
-                <h1 className="ml16">My Course</h1>
+                <h1 className="ml16">Favorites</h1>
               </li>
 
               <li className={s.nav_item}>
