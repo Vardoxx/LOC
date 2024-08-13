@@ -6,8 +6,11 @@ import s from "./CourseCard.module.scss";
 import { homeCardItems } from "./homeCardItems";
 import { libraryCardItems } from "./libraryCardItems";
 import { FaHeart } from "react-icons/fa";
+import { useDispatch } from "react-redux";
+import { addToFavorite } from "../../store/favorite/favorite.slice"; // Импортируйте действие
 
 const CourseCard: React.FC<CourseCardProps> = ({ type }) => {
+  const dispatch = useDispatch();
   const [heart, setHeart] = useState(false);
   const [itemArray, setItemArray] = useState<CardItems[]>([]);
 
@@ -42,7 +45,14 @@ const CourseCard: React.FC<CourseCardProps> = ({ type }) => {
               <img src={lang} alt="Language Icon" />
             </div>
 
-            {heart && <FaHeart className={s.card_body__heart} />}
+            {heart && (
+              <FaHeart
+                onClick={() =>
+                  dispatch(addToFavorite({ src, text, lang, href, id }))
+                }
+                className={s.card_body__heart}
+              />
+            )}
 
             <Btn href={href} label="GO!" />
           </div>
