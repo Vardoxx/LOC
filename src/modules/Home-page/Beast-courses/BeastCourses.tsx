@@ -5,8 +5,12 @@ const BeastCourses = () => {
   return (
     <div className="pt36">
       <div className={s.home_page__beast_courses}>
-        <h1></h1>
-        <CourseCard type="home" />
+        <div className={s.home_page__title}>
+          <h1>Top 3 courses for beginers</h1>
+        </div>
+        <div className={s.home_page__card_container}>
+          <CourseCard type="home" />
+        </div>
       </div>
     </div>
   );

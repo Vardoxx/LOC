@@ -1,5 +1,27 @@
 .home_page__beast_courses {
+  display: block;
+}
+
+.home_page__card_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  row-gap: 30px;
+}
+
+.home_page__title {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  font-size: 40px;
+  font-weight: 900;
+  margin: 0px 10px 64px 10px;
+  color: gold;
+  h1 {
+    padding: 30px 30px;
+    border-radius: 8px;
+    border-top: 2px solid rgba(255, 217, 0, 0.521);
+    border-bottom: 2px solid rgba(255, 217, 0, 0.452);
+  }
 }
