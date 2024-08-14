@@ -7,6 +7,7 @@ export const libraryCardItems: CardItems[] = [
     text: "In this course, you will understand how HTML works and write your own website. The best course for those who want to understand the process of creating websites.",
     lang: "https://cdn-icons-png.flaticon.com/128/330/330437.png",
     href: "https://youtu.be/W4MIiV4nZDY?si=-nVtg6Gj1bMMrQns",
+    stack: "js",
   },
   {
     id: 2,
@@ -14,6 +15,7 @@ export const libraryCardItems: CardItems[] = [
     text: "The best beginner's course on JS, from one of the best authors on the subject.",
     lang: "https://cdn-icons-png.flaticon.com/128/330/330437.png",
     href: "https://youtu.be/CxgOKJh4zWE?si=d41vrgPCFus4fD7z",
+    stack: "ts",
   },
   {
     id: 3,
@@ -21,6 +23,7 @@ export const libraryCardItems: CardItems[] = [
     text: "The best beginner's course on JS, from one of the best authors on the subject.",
     lang: "https://cdn-icons-png.flaticon.com/128/330/330437.png",
     href: "https://youtu.be/CxgOKJh4zWE?si=d41vrgPCFus4fD7z",
+    stack: "js",
   },
   {
     id: 4,
@@ -28,6 +31,7 @@ export const libraryCardItems: CardItems[] = [
     text: "The best beginner's course on JS, from one of the best authors on the subject.",
     lang: "https://cdn-icons-png.flaticon.com/128/330/330437.png",
     href: "https://youtu.be/CxgOKJh4zWE?si=d41vrgPCFus4fD7z",
+    stack: "ts",
   },
   {
     id: 5,
@@ -35,6 +39,7 @@ export const libraryCardItems: CardItems[] = [
     text: "The best beginner's course on JS, from one of the best authors on the subject.",
     lang: "https://cdn-icons-png.flaticon.com/128/330/330437.png",
     href: "https://youtu.be/CxgOKJh4zWE?si=d41vrgPCFus4fD7z",
+    stack: "react",
   },
   {
     id: 6,
@@ -42,6 +47,7 @@ export const libraryCardItems: CardItems[] = [
     text: "The best beginner's course on JS, from one of the best authors on the subject.",
     lang: "https://cdn-icons-png.flaticon.com/128/330/330437.png",
     href: "https://youtu.be/CxgOKJh4zWE?si=d41vrgPCFus4fD7z",
+    stack: "js",
   },
   {
     id: 7,
@@ -49,6 +55,7 @@ export const libraryCardItems: CardItems[] = [
     text: "The best beginner's course on JS, from one of the best authors on the subject.",
     lang: "https://cdn-icons-png.flaticon.com/128/330/330437.png",
     href: "https://youtu.be/CxgOKJh4zWE?si=d41vrgPCFus4fD7z",
+    stack: "ts",
   },
   {
     id: 8,
@@ -56,6 +63,7 @@ export const libraryCardItems: CardItems[] = [
     text: "The best beginner's course on JS, from one of the best authors on the subject.",
     lang: "https://cdn-icons-png.flaticon.com/128/330/330437.png",
     href: "https://youtu.be/CxgOKJh4zWE?si=d41vrgPCFus4fD7z",
+    stack: "react",
   },
 ];
 
@@ -66,6 +74,7 @@ export const homeCardItems: CardItems[] = [
     text: "In this course, you will understand how HTML works and write your own website. The best course for those who want to understand the process of creating websites.",
     lang: "https://cdn-icons-png.flaticon.com/128/330/330437.png",
     href: "https://youtu.be/W4MIiV4nZDY?si=-nVtg6Gj1bMMrQns",
+    stack: "",
   },
   {
     id: 2,
@@ -73,6 +82,7 @@ export const homeCardItems: CardItems[] = [
     text: "The best beginner's course on JS, from one of the best authors on the subject.",
     lang: "https://cdn-icons-png.flaticon.com/128/330/330437.png",
     href: "https://youtu.be/CxgOKJh4zWE?si=d41vrgPCFus4fD7z",
+    stack: "",
   },
   {
     id: 3,
@@ -80,5 +90,6 @@ export const homeCardItems: CardItems[] = [
     text: "The best beginner's course on JS, from one of the best authors on the subject.",
     lang: "https://cdn-icons-png.flaticon.com/128/330/330437.png",
     href: "https://youtu.be/CxgOKJh4zWE?si=d41vrgPCFus4fD7z",
+    stack: "",
   },
 ];

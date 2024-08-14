@@ -1,3 +1,18 @@
+.cards_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card_tab {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  row-gap: 30px;
+  flex-wrap: wrap;
+}
+
 .card_body {
   transition: all 0.8s ease-in-out;
   display: flex;

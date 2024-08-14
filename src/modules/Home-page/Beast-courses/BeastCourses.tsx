@@ -1,4 +1,4 @@
-import CourseCard from "../../../ui/course-card/CourseCard";
+import CourseCard from "../../course-card/CourseCard";
 import s from "./BeastCourses.module.scss";
 
 const BeastCourses = () => {

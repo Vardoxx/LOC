@@ -1,0 +1,30 @@
+.sorting_bar {
+  background-color: rgba(0, 0, 0, 0.288);
+  border-radius: 16px;
+  width: 100%;
+  min-height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 0px 30px 0px;
+  margin: 30px 0px 30px 0px;
+}
+
+.sorting_bar__container {
+  display: flex;
+}
+
+.sorting_bar__icon {
+  transition: all 0.5s ease-in-out;
+  max-width: 70px;
+  max-height: 70px;
+  box-shadow: 0px;
+
+  &:last-child {
+    border-radius: 50%;
+  }
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
