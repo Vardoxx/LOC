@@ -3,8 +3,7 @@ import { CardItems } from "../../interfaces/card-items/CardItems";
 import { CourseCardProps } from "../../interfaces/course-card/CourseCardProps";
 import Btn from "../btn/Btn";
 import s from "./CourseCard.module.scss";
-import { homeCardItems } from "./homeCardItems";
-import { libraryCardItems } from "./libraryCardItems";
+import { homeCardItems, libraryCardItems } from "./cardItems";
 import { FaPlusCircle } from "react-icons/fa";
 import { useDispatch } from "react-redux";
 import { addToFavorite } from "../../store/favorite/favorite.slice"; // Импортируйте действие
