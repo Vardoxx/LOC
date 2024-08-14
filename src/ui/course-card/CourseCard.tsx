@@ -11,12 +11,14 @@ import { addToFavorite } from "../../store/favorite/favorite.slice"; // Импо
 
 const CourseCard: React.FC<CourseCardProps> = ({ type }) => {
   const dispatch = useDispatch();
+  const [visible, setVisible] = useState(true);
   const [add, remove] = useState(false);
   const [itemArray, setItemArray] = useState<CardItems[]>([]);
 
   useEffect(() => {
     switch (type) {
       case "home":
+        setVisible(false);
         setItemArray(homeCardItems);
         break;
       case "library":
@@ -54,14 +56,18 @@ const CourseCard: React.FC<CourseCardProps> = ({ type }) => {
           </div>
 
           <div className={s.card_body__footer}>
-            <div>
-              <img src={lang} alt="Language Icon" />
-            </div>
+            {visible && (
+              <div>
+                <img src={lang} alt="Language Icon" />
+              </div>
+            )}
 
-            <FaPlusCircle
-              onClick={() => togleToFavorite(src, text, lang, href, id)}
-              className={s.card_body__plus}
-            />
+            {visible && (
+              <FaPlusCircle
+                onClick={() => togleToFavorite(src, text, lang, href, id)}
+                className={s.card_body__plus}
+              />
+            )}
 
             <Btn href={href} label="GO!" />
           </div>
