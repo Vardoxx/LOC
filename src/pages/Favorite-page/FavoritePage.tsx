@@ -1,5 +1,5 @@
-import { useSelector } from "react-redux";
-
+import { useDispatch, useSelector } from "react-redux";
+import { removeFromFavorites } from "../../store/favorite/favorite.slice";
 import { RootState } from "../../store/store";
 import { FaHeart } from "react-icons/fa";
 import s from "./FavoritePage.module.scss";
@@ -7,6 +7,7 @@ import Btn from "../../ui/btn/Btn";
 
 const FavoritePage = () => {
   const favorites = useSelector((state: RootState) => state.favorite);
+  const dispath = useDispatch();
 
   return (
     <div className="_container pt36">
@@ -26,9 +27,12 @@ const FavoritePage = () => {
                 <img src={lang} alt="Language Icon" />
               </div>
 
-              {/* {heart &&  */}
-              <FaHeart className={s.card_body__heart} />
-              {/* } */}
+              <FaHeart
+                className={s.card_body__heart}
+                onClick={() => {
+                  dispath(removeFromFavorites({ src, text, lang, href, id }));
+                }}
+              />
 
               <Btn href={href} label="GO!" />
             </div>

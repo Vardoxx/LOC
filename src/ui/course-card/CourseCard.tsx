@@ -5,13 +5,13 @@ import Btn from "../btn/Btn";
 import s from "./CourseCard.module.scss";
 import { homeCardItems } from "./homeCardItems";
 import { libraryCardItems } from "./libraryCardItems";
-import { FaHeart } from "react-icons/fa";
+import { FaPlusCircle } from "react-icons/fa";
 import { useDispatch } from "react-redux";
 import { addToFavorite } from "../../store/favorite/favorite.slice"; // Импортируйте действие
 
 const CourseCard: React.FC<CourseCardProps> = ({ type }) => {
   const dispatch = useDispatch();
-  const [heart, setHeart] = useState(false);
+  const [add, remove] = useState(false);
   const [itemArray, setItemArray] = useState<CardItems[]>([]);
 
   useEffect(() => {
@@ -21,12 +21,25 @@ const CourseCard: React.FC<CourseCardProps> = ({ type }) => {
         break;
       case "library":
         setItemArray(libraryCardItems);
-        setHeart(true);
         break;
       default:
         throw new Error(`Missing type for "CourseCard"`);
     }
   }, [type, itemArray]);
+
+  const togleToFavorite = (
+    src: string,
+    text: string,
+    lang: string,
+    href: string,
+    id: number
+  ) => {
+    remove((add) => !add);
+
+    if (!add) {
+      dispatch(addToFavorite({ src, text, lang, href, id }));
+    }
+  };
 
   return (
     <>
@@ -45,14 +58,10 @@ const CourseCard: React.FC<CourseCardProps> = ({ type }) => {
               <img src={lang} alt="Language Icon" />
             </div>
 
-            {heart && (
-              <FaHeart
-                onClick={() =>
-                  dispatch(addToFavorite({ src, text, lang, href, id }))
-                }
-                className={s.card_body__heart}
-              />
-            )}
+            <FaPlusCircle
+              onClick={() => togleToFavorite(src, text, lang, href, id)}
+              className={s.card_body__plus}
+            />
 
             <Btn href={href} label="GO!" />
           </div>

@@ -38,9 +38,18 @@
   padding: 10px;
 }
 
-.card_body__heart {
+.card_body__plus {
+  transition: all 0.3s ease-in-out;
+  color: lightcoral;
   box-sizing: border-box;
   width: 30px;
+  border-radius: 50%;
+
+  &:hover {
+    color: orange;
+    transform: scale(1.1);
+    box-shadow: 3px 3px plum;
+  }
 }
 .card_body__footer {
   display: flex;
