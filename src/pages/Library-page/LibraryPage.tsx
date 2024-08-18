@@ -1,12 +1,9 @@
-import CourseCard from "../../modules/Course-card/CourseCard";
-import s from "./LibraryPage.module.scss";
+import CourseCards from "../../modules/Library-page/CourseCards";
 
 const LibraryPage = () => {
   return (
     <div className="_container pt36">
-      <div className={s.card_container}>
-        <CourseCard />
-      </div>
+      <CourseCards />
     </div>
   );
 };

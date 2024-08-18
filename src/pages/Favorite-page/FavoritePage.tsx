@@ -12,29 +12,34 @@ const FavoritePage = () => {
   return (
     <div className="_container pt36">
       <div className={s.library_page}>
-        {favorites.map(({ src, text, lang, href, id }) => (
-          <div key={id} className={s.card_body}>
+        {favorites.length === 0 ? (
+          <div style={{ fontSize: "40px" }}>
+            Nothing has been added to favorites.
+          </div>
+        ) : null}
+        {favorites.map((i) => (
+          <div key={i.id} className={s.card_body}>
             <div className={s.card_body__img}>
-              <img src={src} alt="Course Image" />
+              <img src={i.src} alt="Course Image" />
             </div>
 
             <div className={s.card_body__description}>
-              <h1>{text}</h1>
+              <h1>{i.text}</h1>
             </div>
 
             <div className={s.card_body__footer}>
               <div>
-                <img src={lang} alt="Language Icon" />
+                <img src={i.lang.lgIcon} alt="Language Icon" />
               </div>
 
               <FaHeart
                 className={s.card_body__heart}
                 onClick={() => {
-                  dispath(removeFromFavorites({ src, text, lang, href, id }));
+                  dispath(removeFromFavorites(i));
                 }}
               />
 
-              <Btn href={href} label="GO!" />
+              <Btn href={i.href} label="GO!" />
             </div>
           </div>
         ))}

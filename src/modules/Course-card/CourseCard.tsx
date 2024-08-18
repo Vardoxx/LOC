@@ -3,18 +3,17 @@ import s from "./CourseCard.module.scss";
 import { FaPlusCircle } from "react-icons/fa";
 import { libraryCardItems } from "./cardItems";
 import { useEffect, useState } from "react";
-import SortingBar from "../../components/sorting-bar/SortingBar";
 import { useDispatch } from "react-redux";
 import { addToFavorite } from "../../store/favorite/favorite.slice";
+import { CourseCardProps } from "../../interfaces/course-card/CourseCardProps";
 
-const CourseCard = () => {
+const CourseCard: React.FC<CourseCardProps> = ({ sortingValue }) => {
   const [itemArr, setItemArr] = useState(libraryCardItems);
-  const [sort, setSort] = useState("");
   const dispatch = useDispatch();
 
   useEffect(() => {
     let sortedArr = [...itemArr];
-    switch (sort) {
+    switch (sortingValue) {
       case "":
         sortedArr = libraryCardItems;
         break;
@@ -33,11 +32,10 @@ const CourseCard = () => {
     }
     setItemArr(sortedArr);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [sort]);
+  }, [sortingValue]);
 
   return (
     <>
-      <SortingBar onFilterChange={setSort} />
       <div className={s.cards_container}>
         <div className={s.card_tab}>
           {itemArr.map((i) => (
@@ -69,17 +67,3 @@ const CourseCard = () => {
 };
 
 export default CourseCard;
-
-// const togleToFavorite = (
-//   src: string,
-//   text: string,
-//   lang: string,
-//   href: string,
-//   id: number
-// ) => {
-//   remove((add) => !add);
-
-//   if (!add) {
-//     dispatch(addToFavorite({ src, text, lang, href, id }));
-//   }
-// };
