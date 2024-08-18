@@ -12,6 +12,7 @@
 
 .sorting_bar__container {
   display: flex;
+  gap: 20px;
 }
 
 .sorting_bar__icon {
@@ -19,10 +20,6 @@
   max-width: 70px;
   max-height: 70px;
   box-shadow: 0px;
-
-  &:last-child {
-    border-radius: 50%;
-  }
 
   &:hover {
     transform: scale(1.1);

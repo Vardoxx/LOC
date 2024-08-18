@@ -11,6 +11,13 @@ const SortingBar: React.FC<SortingBarProps> = ({ onFilterChange }) => {
       <div className={s.sorting_bar__container}>
         <img
           className={s.sorting_bar__icon}
+          src="https://cdn-icons-png.flaticon.com/128/2626/2626965.png"
+          alt=""
+          onClick={() => handleFilterChange("")}
+        />
+
+        <img
+          className={s.sorting_bar__icon}
           src="https://img.icons8.com/?size=100&id=uJM6fQYqDaZK&format=png&color=000000"
           alt=""
           onClick={() => handleFilterChange("js")}

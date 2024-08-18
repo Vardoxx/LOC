@@ -4,10 +4,13 @@ import { FaPlusCircle } from "react-icons/fa";
 import { libraryCardItems } from "./cardItems";
 import { useEffect, useState } from "react";
 import SortingBar from "../../components/sorting-bar/SortingBar";
+import { useDispatch } from "react-redux";
+import { addToFavorite } from "../../store/favorite/favorite.slice";
 
 const CourseCard = () => {
   const [itemArr, setItemArr] = useState(libraryCardItems);
   const [sort, setSort] = useState("");
+  const dispatch = useDispatch();
 
   useEffect(() => {
     let sortedArr = [...itemArr];
@@ -27,10 +30,6 @@ const CourseCard = () => {
         sortedArr = libraryCardItems;
         sortedArr = sortedArr.filter((i) => i.stack === "react");
         break;
-      default:
-        throw new Error(
-          `SortedArr for Library-page doesn't work or unknown parameter in state`
-        );
     }
     setItemArr(sortedArr);
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -39,7 +38,6 @@ const CourseCard = () => {
   return (
     <>
       <SortingBar onFilterChange={setSort} />
-
       <div className={s.cards_container}>
         <div className={s.card_tab}>
           {itemArr.map((i) => (
@@ -47,7 +45,6 @@ const CourseCard = () => {
               <div className={s.card_body__img}>
                 <img src={i.src} alt="Course Image" />
               </div>
-
               <div className={s.card_body__description}>
                 <h1>{i.text}</h1>
               </div>
@@ -56,9 +53,8 @@ const CourseCard = () => {
                 <div>
                   <img src={i.lang.lgIcon} alt="Language Icon" />
                 </div>
-
                 <FaPlusCircle
-                  // onClick={() => togleToFavorite(src, text, lang, href, id)}
+                  onClick={() => dispatch(addToFavorite(i))}
                   className={s.card_body__plus}
                 />
 
