@@ -1,9 +1,9 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { CardItems } from "../../interfaces/card-items/CardItems";
+import { CardItemsLibrary } from "../../interfaces/card-items/CardItems";
 
 export const favoriteSlice = createSlice({
   name: "favorite",
-  initialState: [] as CardItems[],
+  initialState: [] as CardItemsLibrary[],
   reducers: {
     addToFavorite: (state, action) => {
       const card = action.payload;
